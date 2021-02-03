@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b5fe0afbc9.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="" style="margin-left :2%;">
+          <h1 style="color:#7effdb">HODLINFO</h1><h4 style="color:#7effdb;">.com</h4>
+          <select id="" name="">
+              <option value="inr">INR</option>
+          </select>
+          <select id="" name="" style="margin-left:1%;">
+              <option value="btc">BTC</option>
+          </select>
+          <span class="dot" style="margin-left:23%;">58</span>
+          <button type="button" name="button" ><i class="fab fa-telegram-plane"></i> Connect telegram</button>
+
+          <label class="switch" style="margin-left:1%;">
+            <input type="checkbox" checked>
+            <span class="slider round" ></span>
+          </label>
+          <br>
+          <p style="color:grey;">Powered By</p><p style="color:#7effdb;"> Finstreet</p>
+        </div>
+
+        <table style="text-align: center;width :100%;font-size:1.2rem;margin-top: 5%;" class="spacet" >
+            <thead style="color:#dbe2ef">
+                <tr style="background-color:#252a34">
+                    <th scope="col">#</th>
+                    <th scope="col">name</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Buy / Sell Price</th>
+                    <th scope="col">volume</th>
+                    <th scope="col">base_unit</th>
+
+                </tr>
+            </thead>
+            <tbody style="color:#f9ffea;">
+                <% arr.forEach((item, index)=>{ %>
+                    <% for (const [key, value] of Object.entries(item)) {%>
+                    <tr >
+                        <td class="spacer">
+                            <%= index+1 %>
+                        </td>
+                        <td>
+                            <%= value.name %>
+                        </td>
+                        <td>
+                            <%= value.last %>
+                        </td>
+                        <td>
+                            ₹<%= value.buy %> / ₹<%= value.sell %>
+                        </td>
+                        <td>
+                            <%= value.volume %>
+                        </td>
+                        <td>
+                            <%=value.base_unit %>
+                        </td>
+                    </tr>
+                    <% } %>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
